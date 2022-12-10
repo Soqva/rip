@@ -1,9 +1,10 @@
 spring:
   datasource:
-    url: 'jdbc:postgresql://localhost:5432/rip'
+    url: 'jdbc:postgresql://database:5432/rip'
     username: 'postgres'
     password: 'postgres'
   rabbitmq:
+    host: 'rabbitMQ'
     username: 'admin'
     password: 'admin'
     virtual-host: 'vhost'
