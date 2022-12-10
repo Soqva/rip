@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: 'jdbc:postgresql://database:5432/rip'
+    username: 'postgres'
+    password: 'postgres'
+  rabbitmq:
+    username: 'admin'
+    password: 'admin'
+    virtual-host: 'vhost'
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+

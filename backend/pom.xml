@@ -17,6 +17,8 @@
 
     <properties>
         <java.version>11</java.version>
+        <springdocOpenapiUi.version>1.6.11</springdocOpenapiUi.version>
+        <modelmapper.version>3.1.0</modelmapper.version>
     </properties>
 
     <dependencies>
@@ -58,6 +60,16 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.modelmapper</groupId>
+            <artifactId>modelmapper</artifactId>
+            <version>${modelmapper.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>${springdocOpenapiUi.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

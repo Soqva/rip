@@ -1,0 +1,41 @@
+version: '3.8'
+services:
+
+  # back-end часть приложения
+  backend:
+    build:
+      context: ../backend/.
+      target: development
+    container_name: 'backend'
+    ports:
+      - '8080:8080'
+    depends_on:
+      - database
+      - rabbitMQ
+
+  # база данных PostgreSQL
+  database:
+    image: 'postgres:14.4-alpine'
+    container_name: 'database'
+    ports:
+      - '5432:5432'
+    environment:
+      - 'POSTGRES_USER=postgres'
+      - 'POSTGRES_PASSWORD=postgres'
+      - 'POSTGRES_DB=rip'
+    volumes:
+      - pg_data:/var/lib/pg
+
+  # брокер сообщений RabbitMQ
+  rabbitMQ:
+    image: 'rabbitmq:3.11.2-management-alpine'
+    container_name: 'rabbitMQ'
+    ports:
+      - '15672:15672'
+      - '5672:5672'
+    environment:
+      - 'RABBITMQ_DEFAULT_USER=admin'
+      - 'RABBITMQ_DEFAULT_PASS=admin'
+      - 'RABBITMQ_DEFAULT_VHOST=vhost'
+volumes:
+  pg_data:

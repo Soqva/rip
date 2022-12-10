@@ -1,1 +1,8 @@
-
+spring:
+  jpa:
+    open-in-view: false
+  liquibase:
+    change-log: db/changelog/changelog-master.yaml
+    enabled: false
+  profiles:
+    active: development
