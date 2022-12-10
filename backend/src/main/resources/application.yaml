@@ -3,6 +3,6 @@ spring:
     open-in-view: false
   liquibase:
     change-log: db/changelog/changelog-master.yaml
-    enabled: false
+    enabled: true
   profiles:
     active: development

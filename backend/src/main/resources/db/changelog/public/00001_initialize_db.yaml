@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: '1'
+      author: s0qva
+  - include:
+      file: db/changelog/ddl/table/1_001_create_tables.sql
+  - include:
+      file: db/changelog/dml/1_002_insert_default_data.sql
