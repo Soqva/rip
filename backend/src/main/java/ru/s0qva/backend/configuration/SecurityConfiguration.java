@@ -33,7 +33,8 @@ public class SecurityConfiguration {
             "/v3/api-docs/**",
             "/swagger-ui.html",
             "/swagger-ui/**",
-            "/api/v1/tokens/**"
+            "/api/v1/tokens/**",
+            "/event-emitter/**"
     };
 
     @Value("${jwt.public.key}")
